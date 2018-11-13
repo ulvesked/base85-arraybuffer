@@ -1,0 +1,13 @@
+{
+  "name": "base85-arraybuffer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/base85.js",
+  "types": "dist/base85.d.ts",
+  "typings": "dist/base85.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
