@@ -77,7 +77,7 @@ function encode(input, options) {
                 var mod_1 = num % pow;
                 num = Math.floor(num / pow);
                 var char = void 0;
-                if (!ascii85) {
+                if (ascii85) {
                     char = String.fromCharCode(num + 33);
                 }
                 else {
@@ -136,7 +136,7 @@ function decode(data, options) {
         }
         num = num * 85 + val;
         if (i % 5 == 4) {
-            result.setUint32(offset, num);
+            result.setUint32(offset, num, false);
             num = 0;
             offset += 4;
         }
