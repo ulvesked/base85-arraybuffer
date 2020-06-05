@@ -1,6 +1,7 @@
 "use strict";
 // https://gist.github.com/pascaldekloe/62546103a1576803dade9269ccf76330
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.decodeUTF8 = exports.encodeUTF8 = void 0;
 // This is free and unencumbered software released into the public domain.
 // Type annotations and slight modifications by ulvesked 
 // Marshals a string to an Uint8Array.

@@ -14,7 +14,7 @@ function resizeArrayBuffer(buffer: ArrayBuffer, offset: number, length: number) 
 		return buffer;
 	}
 	else if (length > buffer.byteLength) {
-		if (typeof ((<any>ArrayBuffer).transfer) == 'undefined') {
+		if (typeof ((<any>ArrayBuffer).transfer) == 'function') {
 			return (<any>ArrayBuffer).transfer(buffer, length);
 		}
 		else {

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.decode = exports.decodeString = exports.encode = exports.encodeString = void 0;
 var utf8 = require("./utf8");
 var BASE85_CHARS_Z85 = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz.-:+=^!/*?&<>()[]{}@%$#";
 function resizeArrayBuffer(buffer, offset, length) {
@@ -7,7 +8,7 @@ function resizeArrayBuffer(buffer, offset, length) {
         return buffer;
     }
     else if (length > buffer.byteLength) {
-        if (typeof (ArrayBuffer.transfer) == 'undefined') {
+        if (typeof (ArrayBuffer.transfer) == 'function') {
             return ArrayBuffer.transfer(buffer, length);
         }
         else {
